@@ -24,7 +24,7 @@ const Search = (props) => {
 
     return (
         <div className="bg-neutral-200 min-h-screen">
-            <div className="relative max-w-lg mx-auto  flex bg-neutral-300">
+            <div className="relative max-w-lg mx-auto  flex bg-neutral-300  p-5">
                 <input
                     className="w-full py-2 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none"
                     type="search"
