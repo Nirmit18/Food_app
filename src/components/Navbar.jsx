@@ -7,7 +7,7 @@ const Navbar = (props) => {
 
     <nav class="bg-red-600 border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
-        <a class="flex items-center space-x-3 rtl:space-x-reverse" href="/Home">
+        <a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
 
             <span class="self-center text-2xl font-bold whitespace-nowrap text-red-100">FOODZEE</span>
         </a>
@@ -20,7 +20,7 @@ const Navbar = (props) => {
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-red-600 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
             <li>
-            <a href="#" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Home</a>
+            <a href="/" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Home</a>
             </li>
             <li>
             <a href="/search" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Search</a>

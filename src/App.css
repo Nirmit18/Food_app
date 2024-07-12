@@ -28,6 +28,20 @@
   color: #61dafb;
 }
 
+.star-rating {
+  display: flex;
+  gap: 2px; /* Adjust the gap between stars if needed */
+}
+
+.star-rating svg {
+  cursor: pointer;
+}
+
+.star-rating svg:hover,
+.star-rating svg:hover ~ svg {
+  fill: gold; /* Change this color to whatever you prefer for the filled star */
+}
+
 
 @keyframes App-logo-spin {
   from {

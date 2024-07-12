@@ -7,6 +7,7 @@ import ChildC from './components/ChildC';
 import ChildD from './components/ChildD';
 import Search from './components/Search';
 import Navbar from './components/Navbar';
+import FoodDetails from './components/FoodDetails';
 
 
 
@@ -19,10 +20,11 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/Home' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/b' element={<ChildB />} />
         <Route path='/c' element={<ChildC />} />
         <Route path='/d' element={<ChildD />} />
+        <Route path='/food/:id' element={<FoodDetails />} />
         <Route path='/search' element={<Search />} />
       </Routes>
     </BrowserRouter>
