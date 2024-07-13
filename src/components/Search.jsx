@@ -42,7 +42,7 @@ const Search = (props) => {
             </div>
             <div className="flex flex-wrap   justify-evenly ">
                {data.map((meal)=>(
-                <div key={meal.idMeal} className="sm:w-1/4 w-1/2 sm:ml-1 border-b-2 shadow-2xl mb-10 sm:p-0 p-2 "><Searchmeal meal={meal}></Searchmeal></div>
+                <div key={meal.idMeal} className="sm:w-1/4 w-1/2 sm:ml-1 border-b-2 shadow-2xl mb-10 sm:p-0 p-2  "><Searchmeal meal={meal}></Searchmeal></div>
                ))}
             </div>
 
