@@ -8,6 +8,7 @@ import ChildD from './components/ChildD';
 import Search from './components/Search';
 import Navbar from './components/Navbar';
 import FoodDetails from './components/FoodDetails';
+import Footer from './components/Footer';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/food/:id' element={<FoodDetails />} />
         <Route path='/search' element={<Search />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

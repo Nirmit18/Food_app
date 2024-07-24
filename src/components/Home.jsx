@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import ChildD from "./ChildD";
+import Footer from "./Footer";
 
 
 
@@ -24,16 +25,18 @@ const Home = (props) => {
 
   console.log(data);
   return (
-    <div className="m-8 ">
-      <div className="flex flex-wrap justify-evenly gap-7 h-screen">
+    <><div className="bg-neutral-100">
+    <div className=" ">
+      <div className="flex flex-wrap justify-evenly gap-7 pt-8 pb-10">
         {data.map((meal) => (
         <div key={meal.idCategory} >
           <ChildD meal={meal} />
         </div>
       ))}
       </div>
-
   </div>
+  </div>
+  </>
   );
 };
 
