@@ -9,6 +9,7 @@ import Search from './components/Search';
 import Navbar from './components/Navbar';
 import FoodDetails from './components/FoodDetails';
 import Footer from './components/Footer';
+import Signin from './components/Signin';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/b' element={<ChildB />} />
         <Route path='/c' element={<ChildC />} />
         <Route path='/d' element={<ChildD />} />
+        <Route path='/signin' element={<Signin />} />
         <Route path='/food/:id' element={<FoodDetails />} />
         <Route path='/search' element={<Search />} />
       </Routes>
