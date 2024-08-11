@@ -44,7 +44,8 @@ exports.signup= async(req,res,next)=>{
         const ismatch = await bcrypt.compare(password,user.password)
 
         if(!ismatch){
-            res.json({"message":"all not fine"})
+            console.log("signin error")
+            return res.json({"message":"all not fine"})
         }
         sendtokenresponse(user,200,res);
     }catch(error){
@@ -54,8 +55,32 @@ exports.signup= async(req,res,next)=>{
 
 const sendtokenresponse=async(user,codestatus,res)=>{
     const token = await user.getjwttoken();
-    res
-        // .status(codestatus)
-        .cookie('token',token,{maxAge:60*60*3600})
-        .json({success:true,token,user});
+    console.log(token);
+
+
+    res.cookie('jwt-ka-token', token, {
+        httpOnly: true,  // Ensures the cookie is not accessible via JavaScript on the client-side
+        secure: process.env.NODE_ENV === 'production',  // Ensures the cookie is only sent over HTTPS in production
+        maxAge: 24 * 60 * 60 * 1000  // Cookie expires after 1 day
+    });
+
+    res.status(codestatus).json({
+        success: true,
+        token,
+        user
+    });
+
+
+    
+
+
+}
+
+exports.logout=async(req,res,next)=>{
+    console.log("user logging out")
+    res.clearCookie('jwt-ka-token');
+    res.status(200).json({
+        success:true,
+        message:"logged out"
+    })
 }

@@ -27,7 +27,7 @@ const UserSchema = new mongoose.Schema({
     })
 
     UserSchema.methods.getjwttoken=function(){
-        return jwt.sign({id:this.id},"this isthejwtstring",{
+        return jwt.sign({id:this.id},"thisisthejwtstring",{
             expiresIn:3600
         })
     }
