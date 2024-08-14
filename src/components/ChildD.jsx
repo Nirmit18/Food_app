@@ -7,7 +7,7 @@ const ChildD = ({meal}) => {
     <>
     <div className="border-4 ">
     <div className="flex  items-center flex-col shadow-2xl pb-2">
-    <img src={meal.strCategoryThumb}  />
+    <img src={meal.strCategoryThumb}  alt="food_img"/>
     <div className="p-2 text-xl font-medium">{meal.strCategory}</div>
     </div>
   </div>

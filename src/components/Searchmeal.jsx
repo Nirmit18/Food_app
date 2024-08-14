@@ -1,4 +1,4 @@
-import star from "../asset/rating.png"
+
 import { Link } from "react-router-dom";
 const Searchmeal = ({ meal }) => {
     return (

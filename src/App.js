@@ -15,6 +15,9 @@ import Signin from './components/Signin';
 import Signup from './components/Signup';
 import Loader from './components/Loader';
 
+import MyTypewriter from './components/MyTypewriter';
+import Test from './components/Test';
+
 // Lazy load the Home component
 // const Home = lazy(() => import('./components/Home'));
 const Home = lazy(() =>
@@ -44,7 +47,10 @@ function App() {
         <Route path='/signin' element={<Signin />} />
         {/* <Route path='/l' element={<Logout />} /> */}
         <Route path='/food/:id' element={<FoodDetails />} />
+        <Route path='/test' element={<Test />} />
         <Route path='/search' element={<Search />} />
+
+
       </Routes>
       <Footer />
     </BrowserRouter>

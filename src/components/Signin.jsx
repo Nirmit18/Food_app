@@ -1,7 +1,9 @@
-// import React from "react"
 import React, { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 axios.defaults.withCredentials = true;
+
 
 
 const Signin = (props) => {
@@ -11,19 +13,30 @@ const Signin = (props) => {
     const [password,setpassword]=useState('');
 
     const handlesubmit = async (e)=>{
-        // e.preventDefault();
+        e.preventDefault();
         try {
             await axios.post("http://localhost:8000/api/signin",{
                 name,email,password
             });
+            toast.success("User signed In successfully!!");
+            setname('');
+            setemail('');
+            setpassword('');
         } catch (error) {
-            console.log("there is some error")
+            console.log("there is some error");
+            setname('');
+            setemail('');
+            setpassword('');
+            toast.error("There is some error..Please try again")
         }
     }
 
 
   return (
     <div>
+      <div>
+      <ToastContainer />
+      </div>
         <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
             <svg class="w-8 text-deep-purple-accent-400" className="flex h-20 m-auto w-10" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="red" fill="red" >
@@ -40,14 +53,14 @@ const Signin = (props) => {
     <div>
         <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
         <div class="mt-2">
-          <input id="name" name="email" type="text"  required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2   sm:text-sm sm:leading-6" onChange={(e)=>setname(e.target.value)}/>
+          <input id="name" name="email" type="text"  required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2   sm:text-sm sm:leading-6" onChange={(e)=>setname(e.target.value)} value={name}/>
         </div>
       </div>
       <div>
         
         <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
         <div class="mt-2">
-          <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6" onChange={(e)=>setemail(e.target.value)}/>
+          <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6" onChange={(e)=>setemail(e.target.value)} value={email}/>
         </div>
       </div>
 
@@ -56,7 +69,7 @@ const Signin = (props) => {
           <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
         </div>
         <div class="mt-2">
-          <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6" onChange={(e)=>setpassword(e.target.value)}/>
+          <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6" onChange={(e)=>setpassword(e.target.value)} value={password}/>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import ChildD from "./ChildD";
+import MyTypewriter from "./MyTypewriter";
 
 
 const Home = (props) => {
@@ -22,6 +23,7 @@ const Home = (props) => {
   console.log(data);
   return (
     <div className="bg-neutral-100">
+      <MyTypewriter />
       <div className=" ">
         <div className="flex flex-wrap justify-evenly gap-7 pt-8 pb-10">
           {data.map((meal) => (

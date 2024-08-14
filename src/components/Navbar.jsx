@@ -26,13 +26,13 @@ const Navbar = (props) => {
             <a href="/search" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Search</a>
             </li>
             <li>
-            <a href="#" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">About Us</a>
+            <a href="b" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">About Us</a>
             </li>
             <li>
-            <a href="#" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Home</a>
+            <a href="m" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Home</a>
             </li>
             <li>
-            <a href="#" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Home</a>
+            <a href="k" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Home</a>
             </li>
         </ul>
         </div>
