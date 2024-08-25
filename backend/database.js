@@ -1,8 +1,5 @@
 const mongoose = require("mongoose")
 
-
-
-
 const connection = async ()=>{
     try {
         await mongoose.connect("mongodb://localhost:27017/food_app");
@@ -11,5 +8,6 @@ const connection = async ()=>{
         console.log("server issues");
     }
 }
+
 
 module.exports= connection;
