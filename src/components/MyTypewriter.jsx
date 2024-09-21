@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect"; // Importing the Typewriter componen
 
 const MyTypewriter = (props) => {
   return (
-    <div className="text-5xl font-medium text-red-600 flex pt-20 pl-10 pb-10 w-full">
+    <div className="text-5xl font-medium text-red-600 flex pt-20 pl-10 pb-10 w-full tracking-widest">
       <Typewriter
         options={{
           loop: true, // Enable infinite loop

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { load } from "@cashfreepayments/cashfree-js";
+import Loader from "./Loader";
 
 
 const FoodDetails = () => {
@@ -85,18 +86,35 @@ const FoodDetails = () => {
   }, [id]);
 
   if (!data) {
-    return <div>Loading...</div>;
+    return <div className=" flex justify-center items-center  min-h-screen"><Loader /></div>;
   }
 
   return (
-    <div>
-      <h1>{data.strMeal}</h1>
-      <img src={data.strMealThumb} alt={data.strMeal} />
-      {/* Render other details of the data */}
-      <div>{data.strArea}</div>
-      <button onClick={handleClick}>
-        pay now
+    <div className="mb-10">
+      <div className="sm:flex block">
+        <div className="sm:w-2/4 w-[90vw]">
+        <div className="border-l-8 border-black p-3 text-4xl m-4 font-semibold tracking-wider">{data.strMeal}</div>
+      <img src={data.strMealThumb} alt={data.strMeal} className="m-4 h-96"/>
+      <div className="m-4">
+        <span className="font-semibold text-xl">ORIGIN:</span>
+        <span className="text-xl tracking-wide pl-1 capitalize">{data.strArea}</span>
+      </div>
+      <button onClick={handleClick} className="bg-red-600  text-white pl-4 pr-4 p-2 rounded-md border-none font-medium m-4">
+        ORDER NOW
       </button>
+        </div>
+        <div className="sm:pt-28 m-4 sm:block  hidden w-full">
+          <div>
+            <span className="border-l-4  border-black pl-2 text-3xl m-4 font-semibold text-red-600">INSTRUCTIONS</span>
+            <div className="m-4">{data.strInstructions}</div>
+          </div>
+          <div>
+          <span className="font-semibold text-xl m-4">CATEGORY:</span>
+          <span className="text-xl tracking-wide pl-1 capitalize">{data.strCategory}</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };
