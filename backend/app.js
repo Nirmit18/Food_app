@@ -118,6 +118,6 @@ app.get('/api/search', async (req, res) => {
   
   
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(8000, () => {
+  console.log("Server is running on http://localhost:8000");
 });
