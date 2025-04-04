@@ -9,7 +9,7 @@ const Home = (props) => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/categories");
+      const response = await axios.get("https://food-app-914l.onrender.com/api/categories");
       setData(response.data.categories);
     } catch (error) {
       console.log("there is some error");
