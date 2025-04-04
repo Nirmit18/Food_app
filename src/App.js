@@ -39,9 +39,6 @@ function App() {
             </Suspense>
           }
         />
-
-
-
         <Route path='/d' element={<ChildD />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/signin' element={<Signin />} />

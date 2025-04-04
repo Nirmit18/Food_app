@@ -17,10 +17,10 @@ const Footer = (props) => {
             </a>
             <div class="mt-6 lg:max-w-sm">
                 <p class="text-sm text-gray-800">
-                The aim of the website to learn python libraries and deep dive into the ml framework and also to refine the react foundation.
+                The aim of the website to collaborate,learn and engage in environment to build a webapp and grasp deeper understanding of underlying technology.
                 </p>
                 <p class="mt-4 text-sm text-gray-800">
-                The tech stack used:
+                {/* The tech stack used: */}
                 </p>
             </div>
             </div>
@@ -32,7 +32,7 @@ const Footer = (props) => {
             </div>
             <div class="flex">
                 <p class="mr-1 text-gray-800">Email:</p>
-                <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">nirmitk48@gmail.com.mail</a>
+                <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">demo@gmail.com.mail</a>
             </div>
             <div class="flex">
                 <p class="mr-1 text-gray-800">Address:</p>
@@ -68,7 +68,7 @@ const Footer = (props) => {
                 </a>
             </div>
             <p class="mt-4 text-sm text-gray-500">
-                Designed & Implemented by Nirmit
+                <span>Designed & Implemented by: Ayush, Nirmit, Nilansha, Mansi </span>
                 <br />
                 API : <a href="https://www.themealdb.com/api.php">TheMealDB</a> 
             </p>

@@ -29,10 +29,10 @@ const Navbar = (props) => {
             <a href="b" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">About Us</a>
             </li>
             <li>
-            <a href="m" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Home</a>
+            <a href="/signup" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Sign Up</a>
             </li>
             <li>
-            <a href="k" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Home</a>
+            <a href="/signin" class="block py-2 px-3 text-white  rounded md:p-0  " aria-current="page">Sign In</a>
             </li>
         </ul>
         </div>
